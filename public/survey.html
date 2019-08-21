@@ -1,27 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <title>Survey</title>
 </head>
+
 <body>
 
     <h1>Survey Page</h1>
 
 
-    <button type="submit" id="sendSurvey"></button>
-    
-    <script>
-    $("#sendSurvey").on("click", function (event) {
-        event.preventDefault();
-    })
-    
-    
+    <button type="submit" id="sendSurvey">Submit</button>
+
+    <script type="text/javascript">
+
+        $("#sendSurvey").on("click", function () {
+            event.preventDefault();
+
+            newFriend = {
+                "name": "Eric",
+                "photo": "test",
+                "scores": [
+                    5, 5, 5, 5, 5, 5, 5, 5, 5, 5
+                ]
+            }
+
+            console.log(newFriend);
+
+            $.post("/api/friends", newFriend, function (data, err) {
+
+                if (err) {
+                    console.log(err);
+                } else {
+                    console.log("data sent");
+                }
+            })
+
+
+        });
+
+
+
     </script>
 
 
 
 </body>
+
 </html>
