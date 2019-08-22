@@ -1,19 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta http-equiv="Content-Security-Policy" content="default-src *;
-   img-src * 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' *;
-   style-src  'self' 'unsafe-inline' *">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <title>Home</title>
 </head>
-<body>
 
-    <h1>Home Page</h1>
-    
-    <a href="/api/friends">API Friend Link</a>
+<body>
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Compatability Survey
+                </h1>
+                <h2 class="subtitle">
+                    Determine your Compatability with Friends
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <div class="container" id="main-container">
+        <div class="column is-size-3 has-text-centered">
+            <div class="column">
+                <a class="button is-outlined is-large" id="goSurvey" href="/survey">Take the Survey</a>
+                <a class="button is-outlined is-large" id="seeFriends" href="/api/friends">See Friends</a>
+
+            </div>
+        </div>
+
+        <hr>
+
+    </div>
+
+
+    <div class="section">
+        <div class="content has-text-centered">
+
+        </div>
+        </section>
+
+
 
 </body>
+
 </html>

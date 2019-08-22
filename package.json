@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/EricBillings/FriendFinder#readme",
   "dependencies": {
+    "bulma": "^0.7.5",
     "express": "^4.17.1",
     "path": "^0.12.7"
   }

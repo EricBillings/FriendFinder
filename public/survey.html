@@ -5,20 +5,392 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta http-equiv="Content-Security-Policy" content="default-src *;
-   img-src * 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' *;
-   style-src  'self' 'unsafe-inline' *">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <title>Survey</title>
 </head>
 
 <body>
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Compatability Survey
+                </h1>
+                <h2 class="subtitle">
+                    Determine your Compatability with Friends
+                </h2>
+            </div>
+        </div>
+    </section>
 
-    <h1>Survey Page</h1>
+    <div class="container" id="main-container">
+        <div class="column is-size-3 has-text-centered">
+            <div class="column">
+                <p>Answer the Questions Below Using a Scale of 1-5</p>
+            </div>
+        </div>
+        <div class="columns is-size-5 has-text-centered">
+            <div class="column">
+                <p><strong>1</strong> Represents Strongly Disagree   <strong>3</strong> Represents Neutral <strong>5</strong> Represents
+                    Strongly
+                    Agree
+                </p>
+            </div>
+        </div>
 
+        <hr>
+        <div class="columns">
+            <div class="column"></div>
+            <div class="column has-text-centered">
+                Question 1
+            </div>
 
-    <button type="submit" id="sendSurvey">Submit</button>
+            <div class="column">
+                <div class="control">
+                    <label class="radio">
+                        <input type="radio" name="1">
+                        1
+                    </label>
+
+                    <label class="radio">
+                        <input type="radio" name="2">
+                        2
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="3">
+                        3
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="4">
+                        4
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="5">
+                        5
+                    </label>
+                </div>
+            </div>
+            <div class="column"></div>
+        </div>
+
+        <div class="columns">
+            <div class="column"></div>
+            <div class="column has-text-centered">
+                    Question 2
+            </div>
+
+            <div class="column">
+                <div class="control">
+                    <label class="radio">
+                        <input type="radio" name="1">
+                        1
+                    </label>
+
+                    <label class="radio">
+                        <input type="radio" name="2">
+                        2
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="3">
+                        3
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="4">
+                        4
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="5">
+                        5
+                    </label>
+                </div>
+            </div>
+            <div class="column"></div>
+        </div>
+
+        <div class="columns">
+            <div class="column"></div>
+            <div class="column has-text-centered">
+                    Question 3
+            </div>
+
+            <div class="column">
+                <div class="control">
+                    <label class="radio">
+                        <input type="radio" name="1">
+                        1
+                    </label>
+
+                    <label class="radio">
+                        <input type="radio" name="2">
+                        2
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="3">
+                        3
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="4">
+                        4
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="5">
+                        5
+                    </label>
+                </div>
+            </div>
+            <div class="column"></div>
+        </div>
+
+        <div class="columns">
+            <div class="column"></div>
+            <div class="column has-text-centered">
+                    Question 4
+            </div>
+
+            <div class="column">
+                <div class="control">
+                    <label class="radio">
+                        <input type="radio" name="1">
+                        1
+                    </label>
+
+                    <label class="radio">
+                        <input type="radio" name="2">
+                        2
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="3">
+                        3
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="4">
+                        4
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="5">
+                        5
+                    </label>
+                </div>
+            </div>
+            <div class="column"></div>
+        </div>
+
+        <div class="columns">
+            <div class="column"></div>
+            <div class="column has-text-centered">
+                    Question 5
+            </div>
+
+            <div class="column">
+                <div class="control">
+                    <label class="radio">
+                        <input type="radio" name="1">
+                        1
+                    </label>
+
+                    <label class="radio">
+                        <input type="radio" name="2">
+                        2
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="3">
+                        3
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="4">
+                        4
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="5">
+                        5
+                    </label>
+                </div>
+            </div>
+            <div class="column"></div>
+        </div>
+        <div class="columns">
+            <div class="column"></div>
+            <div class="column has-text-centered">
+                    Question 6
+            </div>
+
+            <div class="column">
+                <div class="control">
+                    <label class="radio">
+                        <input type="radio" name="1">
+                        1
+                    </label>
+
+                    <label class="radio">
+                        <input type="radio" name="2">
+                        2
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="3">
+                        3
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="4">
+                        4
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="5">
+                        5
+                    </label>
+                </div>
+            </div>
+            <div class="column"></div>
+        </div>
+        <div class="columns">
+            <div class="column"></div>
+            <div class="column has-text-centered">
+                    Question 7
+            </div>
+
+            <div class="column">
+                <div class="control">
+                    <label class="radio">
+                        <input type="radio" name="1">
+                        1
+                    </label>
+
+                    <label class="radio">
+                        <input type="radio" name="2">
+                        2
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="3">
+                        3
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="4">
+                        4
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="5">
+                        5
+                    </label>
+                </div>
+            </div>
+            <div class="column"></div>
+        </div>
+        <div class="columns">
+            <div class="column"></div>
+            <div class="column has-text-centered">
+                    Question 8
+            </div>
+
+            <div class="column">
+                <div class="control">
+                    <label class="radio">
+                        <input type="radio" name="1">
+                        1
+                    </label>
+
+                    <label class="radio">
+                        <input type="radio" name="2">
+                        2
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="3">
+                        3
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="4">
+                        4
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="5">
+                        5
+                    </label>
+                </div>
+            </div>
+            <div class="column"></div>
+        </div>
+
+        <div class="columns">
+            <div class="column"></div>
+            <div class="column has-text-centered">
+                    Question 9
+            </div>
+
+            <div class="column">
+                <div class="control">
+                    <label class="radio">
+                        <input type="radio" name="1">
+                        1
+                    </label>
+
+                    <label class="radio">
+                        <input type="radio" name="2">
+                        2
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="3">
+                        3
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="4">
+                        4
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="5">
+                        5
+                    </label>
+                </div>
+            </div>
+            <div class="column"></div>
+        </div>
+        <div class="columns">
+            <div class="column"></div>
+            <div class="column has-text-centered">
+                    Question 10
+            </div>
+
+            <div class="column">
+                <div class="control">
+                    <label class="radio">
+                        <input type="radio" name="1">
+                        1
+                    </label>
+
+                    <label class="radio">
+                        <input type="radio" name="2">
+                        2
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="3">
+                        3
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="4">
+                        4
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="5">
+                        5
+                    </label>
+                </div>
+            </div>
+            <div class="column"></div>
+        </div>
+
+    </div>
+
+    
+    <div class="section">
+        <div class="content has-text-centered">
+            
+            <a class="button is-outlined" id="sendSurvey">Submit Survey</a>
+            <a class="button is-outlined" id="sendSurvey" href="/home">Home</a>
+    
+        </div>
+
+        </section>
 
     <script type="text/javascript">
 
@@ -33,7 +405,6 @@
                 ]
             }
 
-            
             $.post("/api/friends", newFriend, function (data, err) {
 
                 if (err) {
