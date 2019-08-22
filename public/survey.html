@@ -223,7 +223,7 @@
                     </label>
 
                     <label class="radio">
-                        <input type="radio" value= 2 name="Q6">
+                        <input type="radio" value=2 name="Q6">
                         2
                     </label>
                     <label class="radio">
@@ -390,9 +390,9 @@
         </section>
 
         <script type="text/javascript">
+            const valArray = [];
 
             function getValue(question) {
-                const valArray = [];
                 let qValue = 0;
 
                 const qArray = ["Q1", "Q2", "Q3", "Q4", "Q5", "Q6", "Q7", "Q8", "Q9", "Q10"];
@@ -423,7 +423,6 @@
 
 
                 };
-
             };
 
             $("#sendSurvey").on("click", function (event) {
@@ -432,15 +431,15 @@
                 getValue();
 
 
-
-
+                let name = localStorage.getItem("userName")
+                let photo = localStorage.getItem("photoFile");
                 newFriend = {
-                    "name": "Eric",
-                    "photo": "test",
-                    "scores": [
-                        5, 5, 5, 5, 5, 5, 5, 5, 5, 5
-                    ]
+                    "name": name,
+                    "photo": photo,
+                    "scores": valArray
                 }
+
+                console.log(newFriend);
 
                 $.post("/api/friends", newFriend, function (data, err) {
 
