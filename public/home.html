@@ -30,13 +30,45 @@
     <div class="container" id="main-container">
         <div class="column is-size-3 has-text-centered">
             <div class="column">
+                <section>
+                    <input class="input is-medium" id="userName" type="text" placeholder="Enter Your Name Here">
+                    <br>
+                    <br>
+
+                    <div class="file has-name is-fullwidth is-medium">
+                        <label class="file-label">
+                            <input class="file-input" type="file" name="photo" id="photoFile">
+                            <span class="file-cta">
+                                <span class="file-icon">
+                                    <i class="fas fa-upload"></i>
+                                </span>
+                                <span class="file-label">
+                                    Upload a Picture
+                                </span>
+                            </span>
+                            <span class="file-name" id="fileName">
+                                e.g. myProfilePhoto.png
+                            </span>
+                        </label>
+                    </div>
+                </section>
+                <br>
+                <section id="register-section">
+
+                    <a class="button is-outlined is-large" id="register" href="/survey">Register</a>
+
+                </section>
+            </div>
+        </div>
+
+        <hr>
+        <div class="column is-size-3 has-text-centered">
+            <div class="column">
                 <a class="button is-outlined is-large" id="goSurvey" href="/survey">Take the Survey</a>
                 <a class="button is-outlined is-large" id="seeFriends" href="/api/friends">See Friends</a>
 
             </div>
         </div>
-
-        <hr>
 
     </div>
 
@@ -45,9 +77,41 @@
         <div class="content has-text-centered">
 
         </div>
-        </section>
+    </div>
 
 
+    <script>
+
+        $("#photoFile").change(function () {
+            const path = $("#photoFile").val();
+            console.log(path);
+        $("#fileName").html(path);
+        });
+
+
+        $("#register").on("click", function (event) {
+            event.preventDefault();
+
+            let userName = $("#userName").val();
+
+            localStorage.setItem("userName", userName);
+
+            const file = $("#photoFile").val();
+
+            localStorage.setItem("photoFile", file);
+
+            $("#fileName").empty();
+
+            $("#register").hide();
+
+            const confirmDiv = ("<div>");
+
+
+            $("#register-section").append(confirmDiv.text("Thanks for Registering. Proceed to the Survery"));
+
+        });
+
+    </script>
 
 </body>
 
