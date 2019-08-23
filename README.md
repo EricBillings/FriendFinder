@@ -28,7 +28,7 @@ This project is an express server application that allows users to register, sub
  
 1. Use node to start your server.
 
-1. Navigate local host port 3000 on your browser.
+1. Navigate local host on your browser.
 
 
 ## Using the app
