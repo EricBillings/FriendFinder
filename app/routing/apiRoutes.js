@@ -15,9 +15,9 @@ module.exports = function (app) {
         console.log(currentUser);
         const scoreArray = [];
         const compareArray = [];
-      
+
         for (let i = 0; i < friendData.length; i++) {
-            
+
 
             friendData[i]["scores"] = friendData[i]["scores"].map(Number)
             let finalScore = friendData[i]["scores"].reduce(function (total, amount) {
@@ -28,34 +28,32 @@ module.exports = function (app) {
             console.log(friendData[i]["scores"]);
             scoreArray.push(friendData[i]["scores"]);
             console.log(scoreArray);
-            
+
         }
-        
-        let userPlace = scoreArray.length -1;
+
+        let userPlace = scoreArray.length - 1;
         let userScore = scoreArray[userPlace];
         console.log(userScore)
-        for (let i = 0; i < (scoreArray.length -1); i++) {
+        for (let i = 0; i < (scoreArray.length - 1); i++) {
             let result = Math.abs(userScore - scoreArray[i]);
             compareArray.push(result);
             console.log(compareArray);
-            
+
         }
 
         let lowestVal = 100;
         for (let i = 0; i < compareArray.length; i++) {
-            if(compareArray[i] < lowestVal) {
+            if (compareArray[i] < lowestVal) {
                 lowestVal = compareArray[i]
                 console.log(lowestVal);
                 let friendPosition = compareArray.indexOf(lowestVal);
                 let friendMatch = friendData[friendPosition];
                 console.log(friendMatch);
-                
             }
-            
+
         }
-        
 
-
+/* Currently console logging the friend match. Could not allocate further time to add to modal pop up functionality */
 
     });
 
