@@ -13,14 +13,9 @@ module.exports = function (app) {
         friendData.push(req.body);
         const currentUser = req.body;
         console.log(currentUser);
-        /*let valArray = req.body.scores.map(Number);
-
-        let finalScore = valArray.reduce(function (total, amount) {
-            return total + amount
-        });
-        console.log(finalScore);
-        */
-
+        const scoreArray = [];
+        const compareArray = [];
+      
         for (let i = 0; i < friendData.length; i++) {
             
 
@@ -31,23 +26,34 @@ module.exports = function (app) {
 
             friendData[i]["scores"] = finalScore;
             console.log(friendData[i]["scores"]);
-
-
+            scoreArray.push(friendData[i]["scores"]);
+            console.log(scoreArray);
+            
+        }
+        
+        let userPlace = scoreArray.length -1;
+        let userScore = scoreArray[userPlace];
+        console.log(userScore)
+        for (let i = 0; i < (scoreArray.length -1); i++) {
+            let result = Math.abs(userScore - scoreArray[i]);
+            compareArray.push(result);
+            console.log(compareArray);
+            
         }
 
-
-
-        /*friendData.forEach(function (element) {
-            let valArray = element.scores.map(Number);
-            valArray.reduce(function (total, amount) {
-               let finalScore = total =+ amount
-                console.log(finalScore);
+        let lowestVal = 100;
+        for (let i = 0; i < compareArray.length; i++) {
+            if(compareArray[i] < lowestVal) {
+                lowestVal = compareArray[i]
+                console.log(lowestVal);
+                let friendPosition = compareArray.indexOf(lowestVal);
+                let friendMatch = friendData[friendPosition];
+                console.log(friendMatch);
                 
-                
-            })
+            }
             
-
-        });*/
+        }
+        
 
 
 
