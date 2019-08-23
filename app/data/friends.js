@@ -147,3 +147,4 @@ const friendArray = [
   ];
 
 module.exports = friendArray;
+

@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <title>Home</title>
 </head>
 
@@ -64,7 +62,7 @@
         <hr>
         <div class="column is-size-3 has-text-centered">
             <div class="column">
-                <a class="button is-outlined is-large" id="goSurvey" href="/survey">Take the Survey</a>
+                <a class="button is-outlined is-large" id="goSurvey" href="./survey.html">Take the Survey</a>
                 <a class="button is-outlined is-large" id="seeFriends" href="/api/friends">See Friends</a>
 
             </div>
@@ -78,38 +76,11 @@
 
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
-    <script>
+    <script src="./app.js">
 
-        $("#photoFile").change(function () {
-            const path = $("#photoFile").val();
-            console.log(path);
-        $("#fileName").html(path);
-        });
-
-
-        $("#register").on("click", function (event) {
-            event.preventDefault();
-
-            let userName = $("#userName").val();
-
-            localStorage.setItem("userName", userName);
-
-            const file = $("#photoFile").val();
-
-            localStorage.setItem("photoFile", file);
-
-            $("#fileName").empty();
-
-            $("#register").hide();
-
-            const confirmDiv = $("<div>");
-
-            $("#register-section").append(confirmDiv.text("Thanks for Registering. Proceed to the Survery"));
-
-
-        });
 
     </script>
 
